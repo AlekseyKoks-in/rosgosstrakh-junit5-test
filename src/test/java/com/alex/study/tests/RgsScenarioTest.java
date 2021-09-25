@@ -66,7 +66,7 @@ public class RgsScenarioTest extends BaseClass {
                 () -> Assertions.assertTrue(titleDialogWindow.getText().contains("Заявка на добровольное медицинское страхование"))
         );
 
-        String frameStockXPath = "//iframe[@class='flocktory-widget' and contains(@style, '500px')]";
+        String frameStockXPath = "//iframe[@class='flocktory-widget' and contains(@style, 'display')]";
         String buttonFrameStockCloseXPath = "//div[@class = 'widget__close js-collapse-login']";
         closeFrame(By.xpath(frameStockXPath), By.xpath(buttonFrameStockCloseXPath));
 
