@@ -65,8 +65,8 @@ public class BaseClass {
         webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    protected void waitUtilElementToBeVisible(By locator) {
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    protected WebElement waitUtilElementToBeVisible(By locator) {
+        return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     protected void waitUtilElementToBeVisible(WebElement element) {
@@ -88,7 +88,7 @@ public class BaseClass {
         Assertions.assertEquals(errorMessage, element.getText(), "Проверка ошибки у поля не была пройдена");
     }
 
-    protected void closeFrame(By byFrame,By byButtonCloseFrame) {
+    protected void closeFrame(By byFrame, By byButtonCloseFrame) {
         if (checkPresentElement(byFrame) != null) {
             WebElement frame = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(byFrame));
             webDriver.switchTo().frame(frame);

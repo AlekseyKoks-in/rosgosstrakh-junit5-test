@@ -8,9 +8,9 @@ public class RgsParametrized {
 
     private static Stream<Arguments> personNames() {
         return Stream.of(
-                Arguments.of("Петров" , "Петр", "Петрович"),
-                Arguments.of("Иванов" , "Иван", "Иванович"),
-                Arguments.of("Васильев" , "Василий", "Васильевич")
+                Arguments.of("Петров", "Петр", "Петрович"),
+                Arguments.of("Иванов", "Иван", "Иванович"),
+                Arguments.of("Васильев", "Василий", "Васильевич")
         );
     }
 }
